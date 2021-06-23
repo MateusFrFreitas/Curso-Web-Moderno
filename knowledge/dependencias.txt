@@ -1,0 +1,83 @@
+Node:
+
+bcrypt-nodejs: criptografar senhas
+https://www.npmjs.com/package/bcrypt
+
+body-parser:
+https://www.npmjs.com/package/body-parser
+
+Consign: facilita os require
+https://www.npmjs.com/package/consign
+
+Cors: permite acessar recursos de outro site
+https://expressjs.com/en/resources/middleware/cors.html
+
+passport: autenticação em aplicativos
+http://www.passportjs.org/
+
+jwt: tokens
+https://jwt.io/
+
+passport-jwt: passport com jwt
+http://www.passportjs.org/packages/passport-jwt/
+
+Knex: SQL query Builder
+http://knexjs.org/
+
+node-schedule: trabalhos em datas específicas
+https://www.npmjs.com/package/node-schedule
+
+pm2: gerenciador de processos em produção
+https://pm2.keymetrics.io/
+
+mongoose:
+https://mongoosejs.com/
+
+pg:
+https://node-postgres.com/
+
+*mysql:
+https://www.npmjs.com/package/mysql
+
+"dependencies": {
+  "bcrypt-nodejs": "0.0.3",
+  "body-parser": "1.18.3",
+  "consign": "0.1.6",
+  "cors": "2.8.4",
+  "express": "4.16.3",
+  "jwt-simple": "0.5.1",
+  "knex": "0.15.2",
+  "moment": "2.22.2",
+  "mongoose": "^5.2.17",
+  "node-schedule": "1.3.0",
+  "passport": "0.4.0",
+  "passport-jwt": "4.0.0",
+  "pg": "7.4.3",
+  "pm2": "3.0.4"
+},
+"devDependencies": {
+  "nodemon": "1.18.4"
+}
+
+Vue:
+
+Axios: consumir apis/requisições
+https://br.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
+
+BootstrapVue
+https://bootstrap-vue.js.org/
+
+Vue-mq: MediaQuery
+https://www.npmjs.com/package/vue-mq
+
+Vue-router
+https://router.vuejs.org/
+
+Vue-toasted: Mensagens
+https://github.com/shakee93/vue-toasted
+
+Liquor-tree: árvore
+https://amsik.github.io/liquor-tree/
+
+Vue2-editor: Editor de texto
+https://www.vue2editor.com/

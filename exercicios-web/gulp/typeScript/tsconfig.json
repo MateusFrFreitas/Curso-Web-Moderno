@@ -1,0 +1,10 @@
+{
+	"files": [
+		"src/**/*.ts"
+	],
+	"compilerOptions": {
+		"rootDir": "src",
+		"noImplicitAny": true, //:any na frente de var sem tipo
+		"target": "es5"
+	}
+}

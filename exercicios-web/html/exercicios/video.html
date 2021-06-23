@@ -1,0 +1,88 @@
+<video id="meuVideo" width="800" height="450" controls autoplay controlsList="nodownload">
+	<source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+	Seu browser não suporta a tag de vídeo.
+</video>
+
+<div wm-progresso="meuVideo" class="progresso">
+	<div></div>
+</div>
+
+<div>
+	<button wm-play="meuVideo">Play</button>
+	<button wm-pause="meuVideo">Pause</button>
+</div>
+
+<!-- <hr>
+
+<video id="meuVideo2" width="800" height="450" controls autoplay controlsList="nodownload">
+	<source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+	Seu browser não suporta a tag de vídeo.
+</video>
+	
+<div wm-progresso="meuVideo2" class="progresso">
+	<div></div>
+</div>
+	
+<div>
+	<button wm-play="meuVideo2">Play</button>
+	<button wm-pause="meuVideo2">Pause</button>
+</div> -->
+
+<style>
+	.progresso {
+		height: 20px;
+		width: 500px;
+		border: solid 1px #444;
+		margin: 20px;
+	}
+
+	.progresso > div {
+		background-color: red;
+		color: #fff;
+		height: 100%;
+		text-align: right;
+		font-size: 14px;
+		width: 0%;
+	}
+</style>
+
+<script>
+	const videos = Array.from(document.querySelectorAll('video'))
+
+	function configurarVideo(id) {
+		const video = document.getElementById(id)
+		const btnPlay = document.querySelector(`[wm-play=${id}]`)
+		const btnPause = document.querySelector(`[wm-pause=${id}]`)
+		const progresso = document.querySelector(`[wm-progresso=${id}]`).firstElementChild
+
+		video.oncontextmenu = () => false
+
+		function playVideo() {
+			video.play()
+		}
+
+		function pauseVideo() {
+			video.pause()
+		}
+
+		function percVideo() {
+			return (video.currentTime * 100 / video.duration)	
+		}
+
+		function atualizarProgresso() {	
+			const perc = percVideo()	
+			progresso.style.width = `${perc}%`
+			progresso.innerHTML = `${perc.toFixed(1)}%`
+		}
+
+		btnPlay.onclick = () => playVideo()
+
+		btnPause.onclick = () => pauseVideo()	
+
+		video.ontimeupdate = () => atualizarProgresso()
+	}
+
+	videos.forEach(video => {
+		configurarVideo(video.getAttribute('id'))
+	})
+</script>

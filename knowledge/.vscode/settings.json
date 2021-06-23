@@ -1,0 +1,15 @@
+{
+	"sqltools.connections": [
+		{
+			"database": "knowledge_final",
+			"dialect": "PostgreSQL",
+			"isActive": true,
+			"isConnected": true,
+			"name": "knowledge_final",
+			"password": "M1A2teus3",
+			"port": 5432,
+			"server": "localhost",
+			"username": "postgres"
+		}
+	]
+}
